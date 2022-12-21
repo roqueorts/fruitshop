@@ -1,0 +1,26 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product</th>
+            <th scope="col">Price</th>
+             <th scope="col">Add</th>
+            <th scope="col">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products; let i= index">
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+           <td> <button class="btn btn-info" (click)="add(product, i, x.value)">Add</button></td>
+           <td><input type="text" #x></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="btn btn-info" (click)="purchase()">Purchase</button>
+
+  </div>
